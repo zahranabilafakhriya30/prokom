@@ -1,0 +1,5 @@
+
+print(5 + 3)
+print(13 - 5)
+print(8 * 1)
+print(24 / 3)
