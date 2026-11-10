@@ -1,0 +1,28 @@
+class User:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+
+class Privileges:
+    def __init__(self):
+        self.privileges = [
+            "Menambahkan postingan",
+            "Menghapus postingan",
+            "Memblokir pengguna"
+        ]
+
+    def show_privileges(self):
+        print("Hak akses administrator:")
+        for privilege in self.privileges:
+            print("-", privilege)
+
+
+class Admin(User):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+        self.privileges = Privileges()
+
+
+admin = Admin("Zahra", "Nabila")
+admin.privileges.show_privileges()
